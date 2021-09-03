@@ -1,7 +1,7 @@
 # Wpf Application
 
-I have created this WPF application to increase my expierence in WPF and c#. I depended on .NET5 ...
-My application fetches the posts from fake API JSONPlaceHolderand shows them in squares, details.
+I have created this WPF application to increase my expierence in WPF and c#. I depended on .NET5 .
+My application fetches the posts from fake API JSONPlaceHolder and shows them in squares, details.
 
 # WHAT IS JSONPLACEHOLDER?
 
