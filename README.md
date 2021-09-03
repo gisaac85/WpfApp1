@@ -1,5 +1,4 @@
-# WpfApp1
-WPF
+# Wpf Application
 
 I have created this WPF application to icrease my expierence in WPF and c#. I depended on .NET5 ...
 I fetched the posts from fake API JSONPlaceHolder.
