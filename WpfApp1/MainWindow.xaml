@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Fetch Post" Height="882" Width="1259" SizeToContent="Height" WindowState="Maximized" Background="Bisque">
+	<Grid x:Name="m_Grid" >
+
+		<Button x:Name="api_btn" Content="Fetch 100 Posts" HorizontalAlignment="Left" Height="53" Margin="44,22,0,0" VerticalAlignment="Top" Width="154" Click="api_btn_Click"/>
+		<TextBox x:Name="api_txtbox" Margin="382,22,585,681" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" IsReadOnly="True" />
+
+		<ListBox x:Name="listBox" Margin="0,466,0,115" Width="1238" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,0,0,0">
+			<ListBox.ItemsPanel>
+				<ItemsPanelTemplate>
+					<UniformGrid Rows="10" Columns="10"></UniformGrid>
+				</ItemsPanelTemplate>
+			</ListBox.ItemsPanel>
+
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel x:Name="stackpanel1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+						<Button x:Name="id_btn" Content="{Binding}" Width="50" Height="50" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,20,0" Background="AliceBlue"></Button>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Label x:Name="label1" Content="" HorizontalAlignment="Left" Height="46" Margin="50,139,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-14.907,5.276"/>
+		<Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="67,243,0,0" VerticalAlignment="Top" Width="131"/>
+		<TextBox x:Name="txt1" BorderThickness="0" Margin="10,466,1188,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" MaxWidth="300"/>
+	</Grid>
+
+</Window>
