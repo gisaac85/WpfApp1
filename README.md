@@ -1,6 +1,6 @@
 # Wpf Application
 
-I have created this WPF application to icrease my expierence in WPF and c#. I depended on .NET5 ...
+I have created this WPF application to increase my expierence in WPF and c#. I depended on .NET5 ...
 I fetched the posts from fake API JSONPlaceHolder.
 
 # WHAT IS JSONPLACEHOLDER?
