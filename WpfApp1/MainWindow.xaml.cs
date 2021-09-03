@@ -26,7 +26,7 @@ namespace WpfApp1
 			ChangeVisiblity(false);
 		}
 
-		private async void api_btn_Click(object sender, RoutedEventArgs e)
+		private async void api_btn_ClickAsync(object sender, RoutedEventArgs e)
 		{
 			ChangeVisiblity(true);
 			txt1.Text="";

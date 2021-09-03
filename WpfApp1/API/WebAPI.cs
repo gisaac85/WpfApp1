@@ -10,7 +10,7 @@ namespace WpfApp1.API
 	public class WebAPI
 	{
 		static HttpClient client = new HttpClient();
-		public static async Task<List<Post>> GetPosts(string path)
+		public static async Task<List<Post>> GetPostsAsync(string path)
 		{
 			try
 			{
