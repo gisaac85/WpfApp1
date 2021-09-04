@@ -1,4 +1,4 @@
-# Wpf Application
+# WPF Application
 
 Windows Presentation Foundation (WPF) is a development framework used to create a desktop application. It is a part of the . NET framework. The WPF has a resolution-independent and vector-based rendering engine which is helpful to deal with modern graphics hardware.
 
