@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Fetch Post" Height="882" Width="1259" SizeToContent="Height" WindowState="Maximized" Background="Bisque">
+        Title="Fetch Post" Height="2521" Width="1406" SizeToContent="Height" WindowState="Maximized" Background="Bisque" HorizontalAlignment="Center" VerticalAlignment="Center">
 	<Grid x:Name="m_Grid" >
 
-		<Button x:Name="api_btn" Content="Fetch 100 Posts" HorizontalAlignment="Left" Height="53" Margin="44,22,0,0" VerticalAlignment="Top" Width="154" Click="api_btn_Click"/>
-		<TextBox x:Name="api_txtbox" Margin="382,22,585,681" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" IsReadOnly="True" />
+		<Button x:Name="api_btn" Content="Fetch 100 Posts" HorizontalAlignment="Left" Height="53" Margin="44,22,0,0" VerticalAlignment="Top" Width="154" Click="api_btn_ClickAsync"/>
+		<TextBox x:Name="api_txtbox" Margin="0,22,0,0" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" IsReadOnly="True" RenderTransformOrigin="0.503,0.621" Width="430" VerticalAlignment="Top" Height="205" >
+			<TextBox.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="1"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBox.RenderTransform>
+		</TextBox>
 
-		<ListBox x:Name="listBox" Margin="0,466,0,115" Width="1238" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,0,0,0">
+		<ListBox x:Name="listBox" Margin="0,232,0,10" Width="1238" Height="Auto" HorizontalAlignment="Center" Padding="0,0,0,0">
 			<ListBox.ItemsPanel>
 				<ItemsPanelTemplate>
 					<UniformGrid Rows="10" Columns="10"></UniformGrid>
@@ -26,9 +35,9 @@
 				</DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>
-		<Label x:Name="label1" Content="" HorizontalAlignment="Left" Height="46" Margin="50,139,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-14.907,5.276"/>
-		<Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="67,243,0,0" VerticalAlignment="Top" Width="131"/>
-		<TextBox x:Name="txt1" BorderThickness="0" Margin="10,466,1188,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" MaxWidth="300"/>
+		<Label x:Name="label1" Content="" HorizontalAlignment="Left" Height="46" Margin="44,88,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-14.907,5.276"/>
+		<Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="56,135,0,0" VerticalAlignment="Top" Width="130"/>
+		<TextBox x:Name="txt1" BorderThickness="0" Margin="1078,33,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" MaxWidth="300"/>
 	</Grid>
 
 </Window>

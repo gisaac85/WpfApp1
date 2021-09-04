@@ -33,7 +33,7 @@ namespace WpfApp1
 			swap = 0;
 
 			// call API to get the 100 posts
-			var model = await WebAPI.GetPosts("https://jsonplaceholder.typicode.com/posts");
+			var model = await WebAPI.GetPostsAsync("https://jsonplaceholder.typicode.com/posts");
 
 			string result = string.Empty;
 
@@ -47,9 +47,9 @@ namespace WpfApp1
 			listBox.ItemsSource = listToShow.Select(x => x.id).ToList();   // default view is : show Id of post
 
 			// set the text of textBox with all post details
-			foreach (var x in model)
+			foreach (var post in model)
 			{
-				result = Environment.NewLine + "Id: " + x.id + Environment.NewLine + "UserId: " + x.userId + Environment.NewLine + "Title: " + x.title + Environment.NewLine + "Body: " + x.body + Environment.NewLine + "-----------------------------------------------";
+				result = Environment.NewLine + "Id: " + post.id + Environment.NewLine + "UserId: " + post.userId + Environment.NewLine + "Title: " + post.title + Environment.NewLine + "Body: " + post.body + Environment.NewLine + "-----------------------------------------------";
 				api_txtbox.Text += result;
 			}
 			label1.Content = "You see Id of Posts Now ...";
@@ -127,6 +127,5 @@ namespace WpfApp1
 				txt1.Visibility = Visibility.Hidden;
 			}
 		}
-
 	}
 }
