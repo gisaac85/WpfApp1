@@ -39,17 +39,17 @@ namespace WpfApp1
 
 			for (int i = 0; i < model.Count; i++)
 			{
-				listToShow.Add(new Post() { id = model[i].id, userId = model[i].userId, title = model[i].title, body = model[i].body });
+				listToShow.Add(new Post() { Id = model[i].Id, UserId = model[i].UserId, Title = model[i].Title, Body = model[i].Body });
 			}
 
 			swap += 2;
 
-			listBox.ItemsSource = listToShow.Select(x => x.id).ToList();   // default view is : show Id of post
+			listBox.ItemsSource = listToShow.Select(x => x.Id).ToList();   // default view is : show Id of post
 
 			// set the text of textBox with all post details
 			foreach (var post in model)
 			{
-				result = Environment.NewLine + "Id: " + post.id + Environment.NewLine + "UserId: " + post.userId + Environment.NewLine + "Title: " + post.title + Environment.NewLine + "Body: " + post.body + Environment.NewLine + "-----------------------------------------------";
+				result = Environment.NewLine + "Id: " + post.Id + Environment.NewLine + "UserId: " + post.UserId + Environment.NewLine + "Title: " + post.Title + Environment.NewLine + "Body: " + post.Body + Environment.NewLine + "-----------------------------------------------";
 				api_txtbox.Text += result;
 			}
 			label1.Content = "You see Id of Posts Now ...";
@@ -63,35 +63,35 @@ namespace WpfApp1
 
 			if (swap % 2 == 0)   // the logic of swap depends on result of mod by 2; if mod = 0 then show userId else show Id
 			{
-				listBox.ItemsSource = listToShow.Select(x => x.userId).ToList();
+				listBox.ItemsSource = listToShow.Select(x => x.UserId).ToList();
 
-				var selectedPost = listToShow.Where(x => x.id == Convert.ToInt32(content)).FirstOrDefault();
+				var selectedPost = listToShow.Where(x => x.Id == Convert.ToInt32(content)).FirstOrDefault();
 
-				tempUserId = selectedPost.userId.ToString();
-				tempId = selectedPost.id.ToString();
+				tempUserId = selectedPost.UserId.ToString();
+				tempId = selectedPost.Id.ToString();
 
 				txt1.Background = Brushes.Transparent;
-				txt1.Text = "Id: " + selectedPost.id + Environment.NewLine + "UserId: " + selectedPost.userId + Environment.NewLine + "Title: " + selectedPost.title + Environment.NewLine + "Body: " + selectedPost.body;
+				txt1.Text = "Id: " + selectedPost.Id + Environment.NewLine + "UserId: " + selectedPost.UserId + Environment.NewLine + "Title: " + selectedPost.Title + Environment.NewLine + "Body: " + selectedPost.Body;
 
 				content = string.Empty;
 
-				label1.Content = "You see UserId of Posts Now ...";
+				label1.Content = "You see UserId View ...";
 				label1.Foreground = Brushes.Blue;
 
 				swap++;
 			}
 			else
 			{
-				listBox.ItemsSource = listToShow.Select(x => x.id).ToList();
+				listBox.ItemsSource = listToShow.Select(x => x.Id).ToList();
 
-				var selectedPost = listToShow.Where(x => x.userId == Convert.ToInt32(tempUserId) && x.id == Convert.ToInt32(tempId)).FirstOrDefault();
+				var selectedPost = listToShow.Where(x => x.UserId == Convert.ToInt32(tempUserId) && x.Id == Convert.ToInt32(tempId)).FirstOrDefault();
 
-				txt1.Text = "Id: " + selectedPost.id + Environment.NewLine + "UserId: " + selectedPost.userId + Environment.NewLine + "Title: " + selectedPost.title + Environment.NewLine + "Body: " + selectedPost.body;
+				txt1.Text = "Id: " + selectedPost.Id + Environment.NewLine + "UserId: " + selectedPost.UserId + Environment.NewLine + "Title: " + selectedPost.Title + Environment.NewLine + "Body: " + selectedPost.Body;
 
 				content = string.Empty;
 				EmptyTempVar();
 
-				label1.Content = "You see Id of Posts Now ...";
+				label1.Content = "You see Id View ...";
 				label1.Foreground = Brushes.Red;
 
 				swap++;
@@ -118,13 +118,23 @@ namespace WpfApp1
 				api_txtbox.Visibility = Visibility.Visible;
 				listBox.Visibility = Visibility.Visible;
 				txt1.Visibility = Visibility.Visible;
-
+				txt1.Background = Brushes.Bisque;
+				txt1.Foreground = Brushes.DarkBlue;
+				txt1.FontWeight = FontWeights.Bold;
+				api_txtbox.Foreground = Brushes.Purple;
+				api_txtbox.Background = Brushes.Gray;
+				api_txtbox.FontWeight = FontWeights.Bold;
+				listBox.Foreground = Brushes.Tomato;
+				listBox.Background = Brushes.Goldenrod;
+				label1.FontWeight = FontWeights.Bold;
+				label2.FontWeight = FontWeights.Bold;
 			}
 			else
 			{
 				api_txtbox.Visibility = Visibility.Hidden;
 				listBox.Visibility = Visibility.Hidden;
 				txt1.Visibility = Visibility.Hidden;
+				txt1.Background = Brushes.Transparent;
 			}
 		}
 	}
