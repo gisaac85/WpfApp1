@@ -1,26 +1,21 @@
 # Wpf Application
 
-I have created this WPF application to increase my expierence in WPF and c#. I depended on .NET5 .
-My application fetches the posts from fake API JSONPlaceHolder and shows them in squares, details.
+Windows Presentation Foundation (WPF) is a development framework used to create a desktop application. It is a part of the . NET framework. The WPF has a resolution-independent and vector-based rendering engine which is helpful to deal with modern graphics hardware.
 
 # WHAT IS JSONPLACEHOLDER?
 
-JSONPlaceholder is a simple fake REST API for testing and prototyping.
-
-It's like an image placeholder but for web developers.
-
-JSONPlaceholder is powered by JSON Server. 
+JSONPlaceholder is a simple fake REST API for testing and prototyping. It's like an image placeholder but for web developers.JSONPlaceholder is powered by JSON Server. 
 
 # Why?
+
 Most of the time when trying a new library, hacking a prototype or following a tutorial, I found myself in need of some data.
-
 I didn't like the idea of using some public API because I had the feeling that I was spending more time registering a client and understanding a complex API than focusing on my task.
-
 But I liked the idea of image placeholders for web designers. So I decided to code a little Express server inspired by that and here is JSONPlaceholder.
-
 You can find it running here and are free to use it in your developments: https://jsonplaceholder.typicode.com.
 
 # My application!
+
+I have created this WPF application to increase my expierence in WPF and c#. I depended on .NET5 . My application fetches the posts from fake API JSONPlaceHolder and shows them in squares, details.
 by clicking on Fetch 100 posts button you will see the controls on the grid and you will see the whole 100 posts details ( Id, UserId , Title , Body ) in order ,
 and you will see 100 squares with content of Id ( by default ). also you see the count of posts.
 
