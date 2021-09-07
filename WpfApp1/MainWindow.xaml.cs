@@ -7,6 +7,7 @@ using System.Windows.Media;
 using WpfApp1.Model;
 using WpfApp1.API;
 using System.Windows.Controls;
+using System.Threading.Tasks;
 
 namespace WpfApp1
 {
@@ -32,8 +33,7 @@ namespace WpfApp1
 			txt1.Text="";
 			swap = 0;
 
-			// call API to get the 100 posts
-			var model = await WebAPI.GetPostsAsync("https://jsonplaceholder.typicode.com/posts");
+			var model = await FetchPostsAsync();
 
 			string result = string.Empty;
 
@@ -96,6 +96,13 @@ namespace WpfApp1
 
 				swap++;
 			}
+		}
+
+		private async Task<List<Post>> FetchPostsAsync()
+		{
+			// call API to get the 100 posts
+			var posts = await WebAPI.GetPostsAsync("https://jsonplaceholder.typicode.com/posts");
+			return posts;
 		}
 
 		/// <summary>
