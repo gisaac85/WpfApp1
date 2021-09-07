@@ -18,7 +18,7 @@ namespace WpfApp1.API
 				HttpResponseMessage response = await client.GetAsync(path);
 				if (response.IsSuccessStatusCode)
 				{
-					var content = await response.Content.ReadAsStringAsync();
+					var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 					model = JsonConvert.DeserializeObject<List<Post>>(content);
 				}
 				return model;
