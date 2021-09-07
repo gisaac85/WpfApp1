@@ -98,9 +98,12 @@ namespace WpfApp1
 			}
 		}
 
+		/// <summary>
+		/// Call API to get the 100 posts
+		/// </summary>
+		/// <returns>posts</returns>
 		private async Task<List<Post>> FetchPostsAsync()
-		{
-			// call API to get the 100 posts
+		{			
 			var posts = await WebAPI.GetPostsAsync("https://jsonplaceholder.typicode.com/posts");
 			return posts;
 		}
